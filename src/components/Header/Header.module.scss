@@ -1,0 +1,48 @@
+@import "../../app/variables";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 20px 20px;
+    width: 375px;
+    background: linear-gradient($colorWhite, $colorWhite);
+}
+
+.logoLink {
+    position: relative;
+    width: 137px;
+    height: 25px;
+
+    @media screen and (min-width: $desktop) {
+        width: 200px;
+        height: 36px;
+    }
+}
+
+.navLinksList {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        column-gap: 98px;
+    }
+}
+
+.burgerBtn {
+    border: transparent;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    // fill: $bodyColor;
+    // stroke: $textColor;
+}
+
+// .close {
+//     width: 32px;
+//     height: 32px;
+// }

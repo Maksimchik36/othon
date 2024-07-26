@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { heroServicesData } from '@/data/heroServicesData'
 import styles from './HeroSection.module.scss'
+import { servicesData } from '@/data/servicesData'
 
 
 const HeroSection = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
 
                 </div>
                 <ul className={styles.servicesList}>
-                    {heroServicesData.map((item, index) => <li
+                    {servicesData.map((item, index) => <li
                         key={index}
                         className={styles.serviceImgsWrapper}
                     >

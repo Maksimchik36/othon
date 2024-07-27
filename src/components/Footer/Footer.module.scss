@@ -1,1 +1,147 @@
 @import "../../app/variables";
+
+.footer {
+    background-color: $colorDarkBlue;
+    color: $colorWhite;
+}
+
+.container {
+    padding: 40px 0px 30px;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.logoIcon {
+    width: 137px;
+    height: 24px;
+    fill: $colorWhite;
+}
+
+.socialMediaList {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+}
+
+.socialMediaIcon {
+    width: 20px;
+    height: 20px;
+    fill: $colorWhite;
+}
+
+.instagram {
+    stroke: $colorDarkBlue;
+}
+
+.socialMediaIcon:hover {
+    fill: $colorActive;
+}
+
+.form {
+    margin-bottom: 68px;
+}
+
+.navigationList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 86px;
+}
+
+.navigationBlock {
+    width: calc((100vw - 46px)/2);
+}
+
+.navigationTitle {
+    margin-bottom: 20px;
+}
+
+.directionsList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: $colorWhite;
+    opacity: 50%;
+}
+
+.citiesList {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 78px;
+}
+
+.citiesBlock {
+    width: calc((100vw - 70px)/2);
+    display: flex;
+    flex-direction: column;
+}
+
+.cityTitle {
+    margin-bottom: 20px;
+}
+
+.type {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.cityAddress {
+    margin-bottom: 13px;
+    margin-top: auto;
+    opacity: 50%;
+}
+
+.internationalOfficesWrapper {
+    width: 212px;
+    margin-bottom: 40px;
+}
+
+.officeItem:not(:last-child) {
+    margin-bottom: 26px;
+}
+
+.officesTitle {
+    margin-bottom: 19px;
+
+}
+
+.company {
+    opacity: 50%;
+}
+
+.certificationsWrapper {
+    margin-bottom: 66px;
+}
+
+.certificationsTitle {
+    margin-bottom: 19px;
+}
+
+.certificationsList {
+    display: flex;
+    column-gap: 10px;
+}
+
+.certificateItem {
+    width: calc((100vw - 50px)/2);
+}
+
+.certificationStandart {
+    margin-bottom: 13px;
+}
+
+.certificationCities {
+    opacity: 50%;
+}
+
+.termPrivacy {
+    margin-bottom: 7px;
+}

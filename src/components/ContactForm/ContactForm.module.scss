@@ -1,0 +1,43 @@
+@import "../../app/variables";
+
+.container {
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 100%;
+    padding: 18px 17px;
+    background-color: $colorWhite;
+    border-radius: 13px;
+    border-color: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 13px;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 18px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    border-radius: 13px;
+    border-color: $colorWhite;
+    color: $colorWhite;
+    background-color: transparent;
+}
+
+
+.arrow {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: $colorActive;
+}

@@ -25,7 +25,8 @@ const AboutSection = () => {
                     src="/images/aboutUs.gif"
                     width={375}
                     height={480}
-                    alt="я джифка"
+                    alt="About Us"
+                    unoptimized
                 />
 
                 <HorizontalLine className={styles.firstLine} />

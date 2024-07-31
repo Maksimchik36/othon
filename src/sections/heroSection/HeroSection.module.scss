@@ -1,11 +1,21 @@
 @import "../../app/variables";
 
+.heroSection {
+    @media screen and (min-width: $desktop) {
+        height: 1094px;
+    }
+}
+
 .container {
-    padding: 0;
     flex-direction: column;
     row-gap: 20px;
     color: $colorWhite;
 
+    @media screen and (min-width: $desktop) {
+        position: relative;
+        width: 1880px;
+        max-width: 1880px;
+    }
 }
 
 .heroImgWrapper {
@@ -14,32 +24,64 @@
     border-radius: 13px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (min-width: $desktop) {
+        width: 100%;
+        height: 665px;
+        border-radius: 13px;
+    }
 }
 
 .heroImg {
-    // background-image: url(/images/hero.webp);
-    // background-color: #1717174D;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(#1717174D, #1717174D), url(/images/hero.webp);
     background-position-x: 33%;
     background-position-y: -8px;
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     scale: 1.35;
+
+    @media screen and (min-width: $desktop) {
+        background: linear-gradient(#1717174D, #1717174D), url(/images/hero.webp);
+        background-position-x: 0;
+        background-position-y: -80px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        scale: 1;
+    }
 }
 
 .heroTitle {
     position: absolute;
     left: 22px;
     bottom: 31px;
+
+    @media screen and (min-width: $desktop) {
+        height: fit-content;
+        bottom: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .servicesList {
     display: flex;
     flex-direction: column;
     row-gap: 11px;
+
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        top: 514px;
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 18px;
+    }
 }
 
 .serviceImgsWrapper {
@@ -48,6 +90,12 @@
     position: relative;
     border-radius: 13px;
     overflow: hidden;
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100vw - 156px)/3);
+        height: 280px;
+        border-radius: 27px;
+    }
 }
 
 .serviceImg {
@@ -58,16 +106,28 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    // background-image: url(/servicesGradient.png);
     background-image: url(/servicesGradient.png), linear-gradient(rgba(24, 48, 108, 0.6), rgba(24, 48, 108, 0.6));
     z-index: 15;
+
+    @media screen and (min-width: $desktop) {
+        background-image: linear-gradient(rgba(24, 48, 108, 1), rgba(24, 48, 108, 1));
+    }
 }
+
+// .serviceImgGradient:hover {
+
+// }
 
 .titlesWrapper {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 20;
+
+    @media screen and (min-width: $desktop) {
+        top: 35px;
+        left: 35px;
+    }
 }
 
 .serviceLink {
@@ -75,10 +135,20 @@
     top: 20px;
     right: 20px;
     z-index: 20;
+
+    @media screen and (min-width: $desktop) {
+        top: 35px;
+        right: 35px;
+    }
 }
 
 .arrow {
     display: block;
     width: 16px;
-    height: 15px;
+    height: 16px;
+
+    @media screen and (min-width: $desktop) {
+        width: 24px;
+        height: 24px;
+    }
 }

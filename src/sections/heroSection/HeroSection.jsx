@@ -6,13 +6,14 @@ import { servicesData } from '@/data/servicesData'
 
 const HeroSection = () => {
     return (
-        <section>
+        <section className={styles.heroSection}>
             <div className={`contentContainer ${styles.container}`}>
                 <div className={styles.heroImgWrapper}>
                     <div className={styles.heroImg}></div>
                     <h1 className={`styleH1 ${styles.heroTitle}`}>Integrity Innovation Dedication</h1>
 
                 </div>
+
                 <ul className={styles.servicesList}>
                     {servicesData.map((item, index) => <li
                         key={index}

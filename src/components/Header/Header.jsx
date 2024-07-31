@@ -8,7 +8,7 @@ import Image from 'next/image'
 const Header = () => {
     const burgerMenu = false;
     return (
-        <header>
+        <header className={styles.header}>
             <div className={`contentContainer ${styles.container}`}>
                 <Link
                     href={"/"}
@@ -26,7 +26,7 @@ const Header = () => {
                 </Link>
 
                 <ul className={styles.navLinksList}>
-                    {navLinksData.map(item => <li key={item.id}>{item.title}</li>)}
+                    {navLinksData.map(item => <li key={item.id} className='buttonText'>{item.title}</li>)}
                 </ul>
 
                 <button

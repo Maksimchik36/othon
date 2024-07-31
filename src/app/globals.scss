@@ -83,14 +83,15 @@ main {
 
 section {
   padding: 0px 20px;
-
-  @media screen and (min-width: $desktop) {
-    padding: 40px 56px;
-  }
 }
 
 section:not(:last-child) {
   margin-bottom: 70px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 100px;
+  }
+
 }
 
 .paintedSection {
@@ -103,18 +104,16 @@ section:not(:last-child) {
 }
 
 .contentContainer {
-  // width: 100%;
   width: 335px;
   height: 100%;
-  // max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: $desktop) {
+    width: 1800px;
     max-width: 1800px;
-    // padding: 0px 60px;
   }
 }
 
@@ -262,7 +261,7 @@ button {
   }
 }
 
-.button {
+.buttonText {
   font-weight: 400;
 
   @media screen and (min-width: $desktop) {

@@ -12,7 +12,6 @@ import { footerCertificationsData } from '@/data/footerCertificationsData'
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <HorizontalLine />
             <div className={`contentContainer ${styles.container}`}>
                 <div className={styles.socialMedia}>
                     <svg className={styles.logoIcon}>
@@ -43,7 +42,7 @@ const Footer = () => {
 
                 <ul className={styles.citiesList}>
                     {footerCitiesData.map((item) => <li key={item.city} className={styles.citiesBlock}>
-                        <h4 className={`styleH3 ${styles.cityTitle}`}>{item.city}{' '}<span className={styles.type}>{item.type}</span>
+                        <h4 className={`styleH3 ${styles.cityTitle} ${styles[item.city]}`}>{item.city}{' '}<span className={styles.type}>{item.type}</span>
                         </h4>
                         <address className={`bodySmall ${styles.cityAddress}`}>{item.address}</address>
                         <p>{item.post}</p>
@@ -75,10 +74,11 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <Link href='/' className={`bodySmall ${styles.termPrivacy}`}>Terms and Conditions</Link>
-                <Link href='/' className={`bodySmall ${styles.termPrivacy}`}>Privacy Policy</Link>
-                <p className='bodySmall'>&copy;2024 OTHON, INC. All Rights Reserved.</p>
+                <Link href='/' className={`bodySmall ${styles.terms}`}>Terms and Conditions</Link>
+                <Link href='/' className={`bodySmall ${styles.policy}`}>Privacy Policy</Link>
+                <p className={`bodySmall ${styles.copyright}`}>&copy;2024 OTHON, INC. All Rights Reserved.</p>
 
+                <p className={styles.author}><span className={styles.creation}>Created with ♡ by</span> DD.NYC®</p>
 
 
             </div>

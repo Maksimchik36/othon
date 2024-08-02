@@ -1,4 +1,3 @@
-import HorizontalLine from '../HorizontalLine/HorizontalLine'
 import { socialMediaData } from '@/data/socialMediaData'
 import styles from './Footer.module.scss'
 import ContactForm from '../ContactForm/ContactForm'
@@ -19,7 +18,7 @@ const Footer = () => {
                     </svg>
 
                     <ul className={styles.socialMediaList}>
-                        {socialMediaData.map(item => <li key={item.id}>
+                        {socialMediaData.map(item => <li key={item.id} className={styles.socialMediaItem}>
                             <svg className={`${styles.socialMediaIcon} ${styles[item.id]}`}>
                                 <use href={`/sprite.svg#${item.iconSrc}`}></use>
                             </svg>
@@ -30,7 +29,7 @@ const Footer = () => {
                 <ContactForm className={styles.form} />
 
                 <ul className={styles.navigationList}>
-                    {footerNavigationData.map(item => <li key={item.title} className={styles.navigationBlock}>
+                    {footerNavigationData.map(item => <li key={item.title} className={`${styles.navigationBlock} ${styles[item.id]}`}>
                         <h3 className={`styleH3 ${styles.navigationTitle}`}>{item.title}</h3>
                         <ul className={styles.directionsList}>
                             {item.directions.map((direction, index) => <li key={index}>
@@ -65,9 +64,9 @@ const Footer = () => {
                     <h3 className={`styleH3 ${styles.certificationsTitle}`}>Certifications</h3>
                     <ul className={styles.certificationsList}>
                         {footerCertificationsData.map(item => <li key={item.standart} className={styles.certificateItem}>
-                            <p className={`bodiSmall ${styles.certificationStandart}`}>{item.standart}</p>
+                            <p className={`bodySmall ${styles.certificationStandart}`}>{item.standart}</p>
                             <ul className={styles.certificationCities}>
-                                {item.cities.map(city => <li key={city}>{city}</li>)}
+                                {item.cities.map(city => <li key={city} className='bodySmall'>{city}</li>)}
                             </ul>
 
                         </li>)}

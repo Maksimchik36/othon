@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './CareersSection.module.scss'
 
@@ -17,13 +16,7 @@ const CareersSection = () => {
                         <li className='title'>Austin, TX</li>
                     </ul>
 
-                    <Image
-                        className={styles.careersPhoto}
-                        src='/images/careers.webp'
-                        width={335}
-                        height={335}
-                        alt="Our careers photo"
-                    />
+                    <div className={styles.careersPhotoWrapper} />
 
                     <div className={styles.awards}>
                         <svg className={styles.iconPlanet}>

@@ -55,11 +55,32 @@
     }
 }
 
-.careersPhoto {
-    object-fit: cover;
+// .careersPhoto {
+//     object-fit: cover;
+//     border-radius: 13px;
+//     overflow: hidden;
+//     margin-bottom: 20px;
+
+//     @media screen and (min-width: $desktop) {
+//         grid-column-start: 3;
+//         grid-row-start: 1;
+//         width: 601px;
+//         height: 713px;
+//         margin-bottom: 0px;
+//         z-index: 10;
+//         border-radius: 0px 20px 20px 0px;
+//         background: url(/images/careers.webp), url(/images/globe-careers-desktop.webp) no-repeat center center;
+//         background-size: 100% 100%;
+//     }
+// }
+
+.careersPhotoWrapper {
+    width: 335px;
+    height: 335px;
     border-radius: 13px;
     overflow: hidden;
     margin-bottom: 20px;
+    background: url(/images/globe-careers-mobile.webp) left top / 100% 100% no-repeat, url(/images/careers.webp) center center / cover no-repeat;
 
     @media screen and (min-width: $desktop) {
         grid-column-start: 3;
@@ -69,6 +90,7 @@
         margin-bottom: 0px;
         z-index: 10;
         border-radius: 0px 20px 20px 0px;
+        background: url(/images/globe-careers-desktop.webp) 120px 70px / 80% 90% no-repeat, url(/images/careers.webp) center center / 100% 100% no-repeat;
     }
 }
 

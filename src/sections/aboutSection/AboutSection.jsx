@@ -1,11 +1,15 @@
+"use client"
+import { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { aboutData } from '@/data/aboutData'
-import styles from './AboutSection.module.scss'
 import { ourHistoryData } from '@/data/ourHistoryData'
-import Link from 'next/link'
+import styles from './AboutSection.module.scss'
 
 
 const AboutSection = () => {
+    const [isSound, setIsSound] = useState(true);
+
     return (
         <section >
             <div className={`contentContainer ${styles.container}`}>
@@ -16,16 +20,10 @@ const AboutSection = () => {
                         <p className={`body ${styles.dataText} ${styles[item.id]}`}>{item.text}</p>
                     </li>)}
                 </ul>
+
                 <div className={styles.videoWrapper}>
-                    <Image
-                        className={styles.video}
-                        src="/images/aboutUs.gif"
-                        fill
-                        alt="About Us"
-                        unoptimized
-                    />
-                    <svg className={styles.iconSound}>
-                        <use href="/sprite.svg#icon-sound-off"></use>
+                    <svg className={styles.iconSound} onClick={() => setIsSound(!isSound)}>
+                        <use href={isSound ? "/sprite.svg#icon-sound-on" : "/sprite.svg#icon-sound-off"}></use>
                     </svg>
                 </div>
 

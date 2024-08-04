@@ -14,7 +14,7 @@
 .container {
     width: 375px;
     padding: 40px 20px 30px;
-    background-color: $colorDarkBlue;
+    background: $colorDarkBlue url(/images/globe-footer-mobile.webp) center 83px / 100% 66% no-repeat;
     color: $colorWhite;
 
     @media screen and (min-width: $desktop) {
@@ -22,8 +22,7 @@
         max-width: 1880px;
         border-radius: 20px;
         padding: 45px;
-        background: $colorDarkBlue url(/images/globe-footer-desktop.webp) no-repeat center center;
-        background-size: 100% 100%;
+        background: $colorDarkBlue url(/images/globe-footer-desktop.webp) center center / 100% 100% no-repeat;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: minmax(417px, 417px);

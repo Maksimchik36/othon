@@ -75,9 +75,12 @@
 // }
 
 .careersPhotoWrapper {
+    width: 335px;
+    height: 335px;
     border-radius: 13px;
     overflow: hidden;
     margin-bottom: 20px;
+    background: url(/images/globe-careers-mobile.webp) left top / 100% 100% no-repeat, url(/images/careers.webp) center center / cover no-repeat;
 
     @media screen and (min-width: $desktop) {
         grid-column-start: 3;

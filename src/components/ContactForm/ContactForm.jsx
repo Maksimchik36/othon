@@ -1,5 +1,6 @@
 import styles from './ContactForm.module.scss'
 
+
 const ContactForm = ({ className }) => {
     return (
         <form className={`${styles.container} ${className}`}>
@@ -19,5 +20,6 @@ const ContactForm = ({ className }) => {
         </form>
     )
 }
+
 
 export default ContactForm

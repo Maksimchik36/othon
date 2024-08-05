@@ -1,7 +1,9 @@
-import "./globals.scss";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 import localFont from 'next/font/local';
+import Header from "@/components/Header/Header";
+// import Footer from "@/components/Footer/Footer";
+import FooterCurrent from "@/components/FooterCurrent/FooterCurrent";
+import "./globals.scss";
+
 
 const satoshiRegular = localFont({
   src: '../fonts/Satoshi-Regular.woff2',
@@ -24,7 +26,8 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
+        <FooterCurrent />
       </body>
     </html>
   );

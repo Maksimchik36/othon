@@ -4,7 +4,7 @@ import styles from './CareersSection.module.scss'
 
 const CareersSection = () => {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="careers">
             <div className="contentContainer">
                 <h4 className={`title ${styles.careersTitle}`}>Careers</h4>
                 <h5 className={`body ${styles.careersOffices}`}>Our Offices</h5>
@@ -26,12 +26,12 @@ const CareersSection = () => {
                     </div>
 
                     <div className={styles.linksWrapper}>
-                        <Link href='/' className={styles.careersLink}>
+                        <a href='/' className={styles.careersLink} target="_blank" rel="noopener noreferrer" >
                             <span className={`title ${styles.linkText}`}>List Job Openings</span>
                             <svg className={styles.arrow}>
                                 <use href="/sprite.svg#icon-arrow-orange" />
                             </svg>
-                        </Link>
+                        </a>
 
                         <Link href='/' className={styles.careersLink}>
                             <span className={`title ${styles.linkText}`}>Apply Now</span>

@@ -1,6 +1,7 @@
 @import "../../app/variables";
 
 .heroSection {
+
     @media screen and (min-width: $desktop) {
         height: 1094px;
     }
@@ -76,7 +77,7 @@
     }
 }
 
-.serviceImgsWrapper {
+.serviceItemWrapper {
     width: 335px;
     height: 160px;
     position: relative;
@@ -92,6 +93,10 @@
 
 .serviceImg {
     object-fit: cover;
+
+    @media screen and (min-width: $desktop) {
+        transition: scale 1000ms;
+    }
 }
 
 .serviceImgGradient {
@@ -106,9 +111,19 @@
     }
 }
 
-// .serviceImgGradient:hover {
+.serviceItemWrapper:hover .serviceImgGradient {
 
-// }
+    @media screen and (min-width: $desktop) {
+        background-image: linear-gradient(rgba(24, 48, 108, 0), rgba(24, 48, 108, 0));
+    }
+}
+
+.serviceItemWrapper:hover .serviceImg {
+
+    @media screen and (min-width: $desktop) {
+        scale: 1.05;
+    }
+}
 
 .titlesWrapper {
     position: absolute;
@@ -123,15 +138,19 @@
 }
 
 .serviceLink {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
+    // current design
+    visibility: hidden;
 
-    @media screen and (min-width: $desktop) {
-        top: 35px;
-        right: 35px;
-    }
+    // // final design
+    // position: absolute;
+    // top: 20px;
+    // right: 20px;
+    // z-index: 20;
+
+    // @media screen and (min-width: $desktop) {
+    //     top: 35px;
+    //     right: 35px;
+    // }
 }
 
 .arrow {

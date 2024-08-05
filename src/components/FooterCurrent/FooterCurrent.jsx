@@ -1,14 +1,14 @@
-import { socialMediaData } from '@/data/socialMediaData'
-import styles from './Footer.module.scss'
-import ContactForm from '../ContactForm/ContactForm'
-import { footerNavigationData } from '@/data/footerNavigationData'
 import Link from 'next/link'
+import ContactForm from '../ContactForm/ContactForm'
+import { socialMediaData } from '@/data/socialMediaData'
+import { footerNavigationData } from '@/data/footerNavigationData'
 import { footerCitiesData } from '@/data/footerCitiesData'
 import { footerInternationalOfficesData } from '@/data/footerInternationalOfficesData'
 import { footerCertificationsData } from '@/data/footerCertificationsData'
+import styles from './FooterCurrent.module.scss'
 
 
-const Footer = () => {
+const FooterCurrent = () => {
     return (
         <footer className={styles.footer}>
             <div className={`contentContainer ${styles.container}`}>
@@ -83,4 +83,4 @@ const Footer = () => {
 }
 
 
-export default Footer
+export default FooterCurrent

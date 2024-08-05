@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient($colorWhite, $colorWhite);
+    background: linear-gradient(rgba(255, 255, 255, 0), $colorWhite);
 }
 
 .logoLink {
@@ -48,11 +48,5 @@
 .icon {
     width: 28px;
     height: 28px;
-    // fill: $bodyColor;
-    // stroke: $textColor;
-}
 
-// .close {
-//     width: 32px;
-//     height: 32px;
-// }
+}

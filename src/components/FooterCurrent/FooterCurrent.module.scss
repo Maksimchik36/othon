@@ -14,12 +14,11 @@
 .container {
     width: 375px;
     padding: 40px 20px 30px;
+    // // final design
+    // background: $colorDarkBlue url(/images/globe-footer-mobile.webp) center 83px / 100% 66% no-repeat;
 
-    // final design
-    background: $colorDarkBlue url(/images/globe-footer-mobile.webp) center 83px / 100% 66% no-repeat;
-
-    // // current design
-    // background: $colorDarkBlue url(/images/globe-footer-mobile.webp) center 83px / 100% 81% no-repeat;
+    // current design
+    background: $colorDarkBlue url(/images/globe-footer-mobile.webp) center 83px / 100% 81% no-repeat;
 
     color: $colorWhite;
 
@@ -27,7 +26,7 @@
         width: 1880px;
         max-width: 1880px;
         border-radius: 20px;
-        padding: 45px;
+        padding: 55px 45px 45px;
         background: $colorDarkBlue url(/images/globe-footer-desktop.webp) center center / 100% 100% no-repeat;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -104,37 +103,36 @@
     margin-bottom: 68px;
 
     @media screen and (min-width: $desktop) {
-        margin-top: 66px;
+        margin-top: 0px;
         margin-bottom: 0px;
-        margin-left: auto;
-        grid-column-start: 4;
-        grid-column-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 4;
         grid-row-start: 1;
     }
 }
 
 .navigationList {
-    // // current design
-    // display: none;
+    //  current design
+    display: none;
 
-    // final design
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 86px;
+    // // final design
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 6px;
+    // margin-bottom: 86px;
 
-    @media screen and (min-width: $desktop) {
-        flex-wrap: nowrap;
-        gap: 0px;
-        margin-top: 74px;
-        margin-bottom: 0px;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 90px;
-    }
+    // @media screen and (min-width: $desktop) {
+    //     flex-wrap: nowrap;
+    //     gap: 0px;
+    //     margin-top: 74px;
+    //     margin-bottom: 0px;
+    //     grid-column-start: 1;
+    //     grid-column-end: 4;
+    //     grid-row-start: 1;
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-column-gap: 90px;
+    // }
 }
 
 .navigationBlock {
@@ -177,8 +175,6 @@
     row-gap: 10px;
     color: $colorWhite;
     opacity: 50%;
-
-    @media screen and (min-width: $desktop) {}
 }
 
 .citiesList {

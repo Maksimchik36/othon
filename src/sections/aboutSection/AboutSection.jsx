@@ -11,7 +11,7 @@ const AboutSection = () => {
     const [isSound, setIsSound] = useState(true);
 
     return (
-        <section >
+        <section id="about">
             <div className={`contentContainer ${styles.container}`}>
                 <h4 className={`title ${styles.titleAbout}`}>About</h4>
                 <ul className={styles.aboutList}>

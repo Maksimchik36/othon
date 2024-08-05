@@ -6,7 +6,7 @@ import SliderArrows from '@/components/SliderArrows/SliderArrows'
 
 const ServicesSection = () => {
     return (
-        <section>
+        <section id="services">
             <div className="contentContainer">
                 <HorizontalLine className={styles.firstLine} />
                 <h4 className={`title ${styles.sectionTitle}`}>Services</h4>
@@ -20,6 +20,7 @@ const ServicesSection = () => {
                     </ul>
                     <SliderArrows />
                 </div>
+
             </div>
         </section>
     )

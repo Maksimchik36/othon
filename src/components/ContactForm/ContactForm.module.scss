@@ -1,5 +1,6 @@
 @import "../../app/variables";
 
+
 .container {
     width: 335px;
 
@@ -68,8 +69,6 @@
     border-color: $colorWhite;
     color: $colorWhite;
     background-color: transparent;
-
-    @media screen and (min-width: $desktop) {}
 }
 
 .btnText {

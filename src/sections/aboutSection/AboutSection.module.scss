@@ -62,32 +62,6 @@
     }
 }
 
-// .videoWrapper {
-//     position: relative;
-//     width: 375px;
-//     height: 480px;
-//     margin-left: -20px;
-//     margin-right: -20px;
-//     margin-bottom: 70px;
-
-//     @media screen and (min-width: $desktop) {
-//         margin-left: 0px;
-//         margin-right: 0px;
-//         margin-bottom: 100px;
-//         width: 100%;
-//         height: 904px;
-//         border-radius: 20px;
-//         overflow: hidden;
-//     }
-// }
-
-// background: url(/images/globe-hero-desktop.webp) center center / 100% 100% no-repeat,
-// url(/images/hero.webp) 0px -80px /cover no-repeat;
-
-// .video {
-//     object-fit: cover;
-// }
-
 .videoWrapper {
     position: relative;
     width: 375px;
@@ -183,7 +157,6 @@
         margin-bottom: 0px;
         display: flex;
         flex-direction: column;
-
     }
 }
 
@@ -266,7 +239,6 @@
     }
 }
 
-
 .ourHistoryPhoto.secondHistory {
     @media screen and (min-width: $desktop) {
         margin-bottom: 334px;
@@ -296,7 +268,6 @@
         padding: 35px 35px 39px;
         margin-left: auto;
         margin-top: 300px;
-
     }
 }
 
@@ -312,14 +283,18 @@
 }
 
 .aboutUsLink {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
+    // current design
+    display: none;
 
-    @media screen and (min-width: $desktop) {
-        right: 33px;
-        bottom: 33px;
-    }
+    // // final design
+    // position: absolute;
+    // right: 16px;
+    // bottom: 16px;
+
+    // @media screen and (min-width: $desktop) {
+    //     right: 33px;
+    //     bottom: 33px;
+    // }
 }
 
 .aboutUsArrow {

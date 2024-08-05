@@ -1,5 +1,6 @@
 import styles from './SliderArrows.module.scss'
 
+
 const SliderArrows = () => {
     return (
         <div className={styles.container}>
@@ -16,5 +17,6 @@ const SliderArrows = () => {
         </div>
     )
 }
+
 
 export default SliderArrows

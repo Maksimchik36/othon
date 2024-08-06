@@ -14,3 +14,19 @@
         font-size: 20px;
     }
 }
+
+.openBurger {
+    display: block;
+    position: fixed;
+    top: 500px;
+    width: 335px;
+    padding: 18px 36px;
+    border-radius: 100px;
+    border: solid 1px $colorWhite;
+    color: $colorWhite;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.35;
+    z-index: 200;
+}

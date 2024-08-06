@@ -11,7 +11,9 @@ import styles from './FooterCurrent.module.scss'
 const FooterCurrent = () => {
     return (
         <footer className={styles.footer}>
-            <div className={`contentContainer ${styles.container}`}>
+            {/* <div className={`contentContainer ${styles.container}`}> */}
+            <div className='contentContainer' id={styles.container}>
+
                 <div className={styles.socialMedia}>
                     <svg className={styles.logoIcon}>
                         <use href="/sprite.svg#icon-logo"></use>

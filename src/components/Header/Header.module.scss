@@ -16,10 +16,26 @@
     background: linear-gradient(rgba(255, 255, 255, 0), $colorWhite);
 }
 
+// .logoLink {
+//     position: relative;
+//     width: 137px;
+//     height: 25px;
+
+//     @media screen and (min-width: $desktop) {
+//         width: 200px;
+//         height: 36px;
+//     }
+// }
+
 .logoLink {
-    position: relative;
+    z-index: 250;
+}
+
+.logoIcon {
     width: 137px;
     height: 25px;
+    fill: $colorDarkBlue;
+    transition: fill 100ms;
 
     @media screen and (min-width: $desktop) {
         width: 200px;
@@ -27,8 +43,20 @@
     }
 }
 
+.burgerLogoIcon {
+    fill: $colorWhite;
+}
+
+// .navLinksList {
+//     display: none;
+
+//     @media screen and (min-width: $desktop) {
+//         display: flex;
+//         column-gap: 98px;
+//     }
+// }
+
 .navLinksList {
-    display: none;
 
     @media screen and (min-width: $desktop) {
         display: flex;
@@ -36,17 +64,64 @@
     }
 }
 
+.navLinks {
+    // position: absolute;
+    transform: translateX(110vw);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $colorWhite;
+    top: 140px;
+    position: fixed;
+    z-index: 200;
+
+    @media screen and (min-width: $desktop) {
+        position: static;
+        color: $colorDarkBlue;
+        flex-direction: row;
+        transform: translateX(0);
+    }
+}
+
+.navLinksOpen {
+    transform: translateX(1vw);
+}
+
 .burgerBtn {
     border: transparent;
+    outline: none;
+    position: relative;
+
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
+    z-index: 150;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        background-color: $colorDarkBlue;
+        z-index: -1;
+
+    }
 
     @media screen and (min-width: $desktop) {
         display: none;
     }
 }
 
+.burgerOpen {
+    &::before {
+        scale: 400;
+    }
+}
+
 .icon {
     width: 28px;
     height: 28px;
-
 }

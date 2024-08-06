@@ -1,12 +1,37 @@
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import ContactUsBtn from '../ContactUsBtn/ContactUsBtn'
 import { navLinksData } from '@/data/navLinksData'
 import styles from './Header.module.scss'
-import Link from 'next/link'
-import Image from 'next/image'
+
 
 
 const Header = () => {
-    const burgerMenu = false;
+    const [burgerMenu, setBurgerMenu] = useState(false);
+    const [navLinks, setNavLinks] = useState(false);
+
+    const toggleBurgerMenu = () => {
+        if (!burgerMenu) {
+            setBurgerMenu(true);
+            setTimeout(() => { setNavLinks(true) }, 100);
+        } else {
+            setNavLinks(false);
+            setTimeout(() => {
+                setBurgerMenu(false)
+            }, 100);
+        }
+    };
+
+    useEffect(() => {
+        if (burgerMenu) {
+            document.body.style.overflowY = "hidden";
+        } else {
+            document.body.style.overflowY = "auto";
+        }
+    }, [burgerMenu]);
+
+
     return (
         <header className={styles.header}>
             <div className={`contentContainer ${styles.container}`}>
@@ -14,23 +39,57 @@ const Header = () => {
                     href={"/"}
                     className={styles.logoLink}
                 >
-                    <Image
-                        src={"/logo.webp"}
-                        fill
-                        alt="OTHON logo"
-                        sizes="30vw"
-                        priority={true}
-                    />
+                    <svg
+                        className={
+                            burgerMenu
+                                ? `${styles.logoIcon} ${styles.burgerLogoIcon}`
+                                : `${styles.logoIcon}`
+                        }
+                    >
+                        <use href="/sprite.svg#icon-logo"></use>
+                    </svg>
                 </Link>
 
-                <ul className={styles.navLinksList}>
+                {/* <ul className={styles.navLinksList}>
                     {navLinksData.map(item => <li key={item.id} className='buttonText'>
                         <Link href={item.href}>{item.title}</Link>
                     </li>)}
-                </ul>
+                </ul> */}
+
+                <nav
+                    // className={styles.navLinksList}
+                    className={
+                        navLinks
+                            ? `${styles.navLinks} ${styles.navLinksOpen}`
+                            : `${styles.navLinks}`
+                    }
+                >
+                    {navLinksData.map(item =>
+                        <Link
+                            className='buttonText'
+                            href={item.href}
+                            key={item.id}
+                            onClick={() => {
+                                setNavLinks(false);
+                                setTimeout(() => {
+                                    setBurgerMenu(false);
+                                }, 500);
+                            }}
+                        >
+                            {item.title}
+                        </Link>
+                    )}
+                </nav>
 
                 <button
-                    className={styles.burgerBtn}>
+                    // className={styles.burgerBtn}
+                    className={
+                        burgerMenu
+                            ? `${styles.burgerBtn} ${styles.burgerOpen}`
+                            : `${styles.burgerBtn}`
+                    }
+                    onClick={toggleBurgerMenu}
+                >
                     {burgerMenu ? (
                         <svg className={`${styles.icon}`}>
                             <use href="/sprite.svg#icon-burger-close"></use>
@@ -42,7 +101,7 @@ const Header = () => {
                     )}
                 </button>
 
-                <ContactUsBtn />
+                <ContactUsBtn burgerMenu={burgerMenu} setNavLinks={setNavLinks} setBurgerMenu={setBurgerMenu} />
             </div>
         </header>
     )

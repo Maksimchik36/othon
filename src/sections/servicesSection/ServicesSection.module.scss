@@ -7,16 +7,28 @@
 .container {
     padding-top: 10px;
     border-top: solid 1px rgba(24, 48, 108, 0.2);
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 16px;
+    }
 }
 
 .sectionTitle {
     margin-bottom: 107px;
     color: $colorActive;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 100px;
+    }
 }
 
 .slider {
     position: relative;
     transition: 300ms;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .slider * {
@@ -29,6 +41,10 @@
     right: 27px;
     border: transparent;
     background-color: transparent;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
 }
 
 .arrowRight {
@@ -37,6 +53,10 @@
     right: 0px;
     border: transparent;
     background-color: transparent;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
 }
 
 .iconLeft,
@@ -50,14 +70,58 @@
     min-height: 82px;
     padding-bottom: 18px;
     border-bottom: solid 1px $colorActive;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
 }
 
 .horLine {
     margin-top: -1px;
     margin-bottom: 18px;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
 }
 
-.sliderCard {
+.directionsList {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 117px;
+        width: 470px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+
+.directionTitle {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        width: fit-content;
+        display: block;
+        color: $colorDarkBlue;
+        opacity: 32%;
+        padding-bottom: 4px;
+        border-bottom: solid 1px transparent;
+        cursor: pointer;
+    }
+}
+
+.activeDirectionTitle {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        opacity: 100%;
+        border-bottom: solid 1px $colorActive;
+    }
+}
+
+.mobileSliderCard {
     position: relative;
     width: 100%;
     padding: 30px 20px 70px;
@@ -68,27 +132,88 @@
     background-position: top center;
     background-size: cover;
     transition: 300ms;
+
+    @media screen and (min-width: $desktop) {
+        // width: 357px;
+        // height: 735px;
+        // padding: 0;
+        // border-radius: 20px;
+        // transform: translateX(-357px);
+        // transition: trasform 1000ms;
+    }
 }
 
-.description {
+.cardsWrapper {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        position: relative;
+        width: 357px;
+        height: 735px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
+
+.desktopSliderCard {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 357px;
+        height: 735px;
+        padding: 0;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        transform: translateX(-357px);
+        transition: transform 2000ms;
+    }
+}
+
+.activeSliderCard {
+    @media screen and (min-width: $desktop) {
+        transform: translateX(0px);
+        opacity: 1;
+        transition: transform 2000ms, opacity 2000ms;
+    }
+}
+
+.opacityPreviousCard {
+    opacity: 0;
+    transition: opacity 2000ms;
+}
+
+
+.mobileDescription {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(255, 255, 255, 0.8);
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
 }
 
 .aboutUsLink {
-    //// current design
-    // display: none;
+    // current design
+    display: none;
 
-    // final design
-    position: absolute;
-    right: 16px;
-    bottom: 18px;
+    // // final design
+    // position: absolute;
+    // right: 16px;
+    // bottom: 18px;
 
     // @media screen and (min-width: $desktop) {
     //     right: 33px;
     //     bottom: 33px;
+    //     z-index: 10;
     // }
 }
 
@@ -97,8 +222,21 @@
     width: 40px;
     height: 40px;
 
-    // @media screen and (min-width: $desktop) {
-    //     width: 53px;
-    //     height: 53px;
-    // }
+    @media screen and (min-width: $desktop) {
+        width: 53px;
+        height: 53px;
+    }
+}
+
+.desktopDescription {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        width: 827px;
+        padding: 35px 48px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        color: rgba(24, 48, 108, 0.8);
+    }
 }
